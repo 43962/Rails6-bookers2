@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "search" => "searches#search"
   get 'relationships/followings'
   get 'relationships/followers'
   get 'book_comments/create'

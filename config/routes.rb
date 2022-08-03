@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get "search" => "searches#search"
   get 'relationships/followings'
   get 'relationships/followers'
@@ -23,6 +24,9 @@ Rails.application.routes.draw do
     get 'followers' => 'relationships#followers', as: 'followers'
   end
 
+  get 'chats/:id' => 'chats#show', as: 'chat'
+  post 'chats/:id' => 'chats#create'
+  resources :chats, only: [:create, :show]
 
 
 

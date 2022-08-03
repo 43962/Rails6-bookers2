@@ -6,7 +6,6 @@ class BooksController < ApplicationController
     @user = @book.user
     @bookn = Book.new
     @book_comment = BookComment.new
-    #@comments = @book.book_comment
     @chats = Chat.new(room_id: room.id)
     
     @book_detail = Book.find(params[:id])
